@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考拉吃树叶</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <img src="koala.png" alt="考拉" id="koala">
+        <div id="leaves-container"></div>
+        <div id="score">分数: 0</div>
+        <div id="message"></div>
+    </div>
+    <div id="game-over-screen" class="hidden">
+        <h2>游戏结束</h2>
+        <p>你的最终得分是: <span id="final-score"></span></p>
+        <button id="restart-btn">重新开始</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
