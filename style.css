@@ -78,3 +78,74 @@ footer p {
         opacity: 0;
     }
 }
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.card {
+    position: relative;
+    width: 200px;
+    height: 280px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.tassel {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 50px;
+}
+
+.tassel-line {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #fff, #e91e63);
+    animation: swing 2s infinite ease-in-out;
+}
+
+@keyframes swing {
+    0%, 100% { transform: rotate(15deg); }
+    50% { transform: rotate(-15deg); }
+}
+
+.tassel-star {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #e91e63;
+    animation: sparkle 1s infinite;
+}
+
+@keyframes sparkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}

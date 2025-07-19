@@ -45,3 +45,36 @@ document.addEventListener('mousemove', (e) => {
         star.remove();
     }, 1000);
 });
+
+// Create cards
+const cardsContainer = document.querySelector('.cards-container');
+const wishes = [
+    "愿你成为自己的太阳，无需凭借谁的光。",
+    "愿你眼里有光，心中有爱，一路春暖花开。",
+    "愿你乘风破浪，归来仍是少年。",
+    "愿你此生尽兴，赤诚善良。",
+    "愿你想要的都得到，得到的都美好。",
+    "愿你活得尽兴，而不是过得庆幸。",
+    "愿你眼里的星星，永远闪亮。",
+    "愿你心里的太阳，永远温暖。"
+];
+
+for (let i = 0; i < 8; i++) {
+    const card = document.createElement('div');
+    card.classList.add('card');
+
+    const content = document.createElement('div');
+    content.classList.add('card-content');
+    content.innerHTML = `<p>${wishes[i]}</p>`;
+
+    const tassel = document.createElement('div');
+    tassel.classList.add('tassel');
+    tassel.innerHTML = `
+        <div class="tassel-line"></div>
+        <div class="tassel-star"></div>
+    `;
+
+    card.appendChild(content);
+    card.appendChild(tassel);
+    cardsContainer.appendChild(card);
+}
