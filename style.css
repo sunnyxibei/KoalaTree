@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap');
+
+body {
+    font-family: 'Noto Serif SC', serif;
+    background: linear-gradient(135deg, #fce4ec, #ffc1e3);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* 隐藏溢出，防止烟花跑到屏幕外 */
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+header h1 {
+    font-size: 4em;
+    color: #e91e63;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+header h2 {
+    font-size: 2.5em;
+    color: #ff4081;
+    margin: 10px 0 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+main p {
+    font-size: 1.5em;
+    line-height: 1.8;
+    color: #555;
+}
+
+footer p {
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #777;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
