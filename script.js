@@ -32,3 +32,16 @@ const confettiRule = `
     animation: fall 5s linear infinite;
 }`;
 styleSheet.insertRule(confettiRule, styleSheet.cssRules.length);
+
+// Star effect
+document.addEventListener('mousemove', (e) => {
+    let star = document.createElement('div');
+    star.classList.add('star');
+    star.style.left = e.pageX + 'px';
+    star.style.top = e.pageY + 'px';
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+        star.remove();
+    }, 1000);
+});
